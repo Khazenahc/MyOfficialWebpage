@@ -1,0 +1,67 @@
+ .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}   
+
+   body {
+  font: 25px Garamond, serif;
+  line-height: 1.8;
+  color: #f5f6f7;
+  padding: 25px;
+  background-color: white;
+  color: grey;
+  }
+
+ 
+  .dark-mode {
+  background-color: #708090;
+  color: ffffff;
+  }
+  
+  * {
+    box-sizing:border-box;
+  }
+
+   p {
+  font-size: 20px;
+  }
+  .margin {
+  margin-bottom: 45px;
+  }
+  .bg-1 { 
+    background-color: hsla(0, 100%, 30%, 0.3);/* blush pink */
+    color: #ffffff;
+  }
+
+  .fa-linkedin {
+  background: #007bb5;
+  color: white;
+  opacity: 0.7;
+  padding: 15px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  
+  }
+  
+  .bg-2 { 
+     background:     url("https://images.unsplash.com/photo-1676757335344-a206a0bd4935?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTM5ODY2MDZ8&ixlib=rb-4.0.3&q=85") no-repeat;
+    background-size: cover;
+  }
+  
+  .bg-3 { 
+    background-color: #fofffo; /* light gray */
+    color: #000000;
+  }
+  .bg-4 { 
+   background-color: hsla(0, 100%, 30%, 0.3);/* blush pink */
+    color: #ffffff;
+  }
+  .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
