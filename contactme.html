@@ -17,8 +17,7 @@
  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
      crossorigin=""></script> 
-</head>
- 
+</head> 
 <body>
  <nav class="navbar navbar-default">
   <a class="navbar-brand"></a>
@@ -27,8 +26,7 @@
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span> 
-        </button>
+        <span class="icon-bar"></span>             </button>
       <a class="navbar-brand" href="#">Khazenah LaShelle</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
@@ -52,7 +50,7 @@
 <br>You can also find me on LinkedIn by clicking here &#128073; <a href="https://www.linkedin.com/in/khazenah-cheffen-artist-designer-developer/" class="fa fa-linkedin"></a></p>
 </div>      
   
-  <form method="POST" class="contact-form" id="get-in-touch">
+  <form id="get-in-touch"  action="https://formcarry.com/s/X-ovbwUEXo" accept-charset="UTF-8">
     <div class="col-sm-7">
       <div class="row">
         <div class="col-sm-6 form-group">
@@ -64,15 +62,12 @@
       </div>
       <textarea class="form-control" id="message" name="message" placeholder="Your Message" type="message" rows="7"></textarea><br>
       <div class="row">
-        
-      <div class="sent-message">
-        Your message was submitted successfully! I will be in touch soon
+      <input type="hidden" name="_gotcha">
       </div>
-    </div>
-        
-        <div class="col-sm-12 form-group">
-         <input type="submit" class="btn btn-lg pull-center" name="submit" value="Submit" </input>
+         <div class="col-sm-12 form-group">
+         <input type="submit" class="btn btn-lg pull-center" name="submit" value="Submit"</input>
           </form>
+          <p id="output"></p>
         </div>
     </div>
 </div>
@@ -89,7 +84,7 @@
   <!--second container-->
  <section>    
 <div class="container-fluid bg-2 text-center">
-  <div id="map" style="width: 800px; height: 800px;">
+  <div id="map" style="max-width: 100%; height: 800px;">
  </section>
   </div>
  </div>
@@ -109,6 +104,7 @@ alt="MySkills" style="width:100%; height:auto;"/>
   <footer class="container-fluid bg-4 text-center">
   <p><a href=</a></p> 
   </footer>
-  <script src="script3.js"></script> 
+    <script src="script3.js"></script>
  </body>  
 </html>
+
