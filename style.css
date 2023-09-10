@@ -1,48 +1,159 @@
-.dark-mode {
-   background-color: #708090;
-   color: #ffffff;
+/*scroll & fade styling*/
+
+  .item {
+    transition: opacity 0.5s, transform 0.9s;
+ }
+
+  .left {
+    transform-origin: left center;
+    transform: translateX(-50%);
+ }
+
+  .right {
+    transform-origin: right center;
+    transform: translateX(50%);
+ }
+
+  .slide-in {
+    opacity: 1;
+    transform: translateX(0);
+ }
+
+
+ /*paragraph content and background transition*/
+
+   body {
+    font: 20px Garamond, serif;
+    line-height: 1.8;
+    color: #f5f6f7;
+    padding: 25px;
+    background-color: white;
+    color: grey;
   }
 
-
-/*card styling*/
-
-.flip-card {
-  float: right;
-  width: 350px;
-  height: 350px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px; 
+  .dark-mode {
+    background-color: #708090;
+    color: ffffff;
+  }
+ * {box-sizing:border-box;
 }
 
-.flip-card-inner {
-  display:flex; 
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
+/*study timer*/
+ 
+   p1 {
+     text-align: column-center;
+     font-size: 60px;
+     margin-top: 0px;
+     align-content: space-around;
+   }
 
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
+  .container-lg {
+    display: grid;
+    height: 250px;
+    max-width: 100%;
+    background-color: #d3d3d3;
+    box-shadow: 10px 10px 5px 12px RosyBrown;
+    display: inline-block;
+   }
 
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; 
-  backface-visibility: hidden;
-}
 
-.flip-card-front {
-  background-color: #bbb;
-  color: white;
-}
+/* Slideshow container */
+  
+   .slideshow-container {
+     max-width: 100%;
+     position: relative;
+     margin: auto;
+    }
 
-.flip-card-back {
-  background-color: #708090;
-  color: #ffffff;
-  transform: rotateY(180deg);
+/* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: relative;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+/*button positons on slideshow */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+
+
+/* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+     }
+
+/* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+     }
+
+    .active, .dot:hover {
+      background-color: #717171;
+     }
+
+/* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 10s;
+     }
+
+  @keyframes fade {
+  from {
+    opacity: .4;
+    }
+   to {opacity: 1;
+    }
 }
+   p {
+     font-size: 16px;
+    }
+  .margin {
+    margin-bottom: 45px;
+    }
+  .bg-1 { 
+    background-color: hsla(0, 100%, 30%, 0.3);/* blush pink */
+    color: #ffffff;
+    }
+  .bg-2 { 
+    background-color: #d3d3d3; /* slate gray */
+    color: #555555;
+    }
+  .bg-3 { 
+    background-color: #fofffo; /* light gray */
+    color: #000000;
+    }
+  .bg-4 { 
+    background-color: hsla(0, 100%, 30%, 0.3);/* blush pink */
+    color: #ffffff;
+    }
+  .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    }
+  
