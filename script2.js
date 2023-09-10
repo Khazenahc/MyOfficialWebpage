@@ -1,70 +1,100 @@
-/*dark/light mode switch*/
+const darkMode = $(".go-dark")
+const button = $("button")
 
-function myFunction() {
-   var element = document.body;
-   element.classList.toggle("dark-mode");
-}
-
-/*timer*/
-
-  var countUpDate = new Date("Apr 1, 2023       15:00:25").getTime();
-
-  var x = setInterval(function() {
-
-  var now = new Date().getTime();
-    
-  var distance = now - countUpDate;
-    
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / ( 1550 * 60 * 60 * 24));
-  var hours = Math.floor((distance % ( 1000 * 60 * 60 * 24)) / (1000 *60 * 60));
-  var minutes = Math.floor((distance % (1000* 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-  // Output the result in an element with id="demo"
-  document.getElementById("study-time").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-    
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("study-time").innerHTML = "CONTINUOUS";
-  }
-}, 1000);
-
-/*slideshow script*/
-
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1
-}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 7000); // Change image every 7 seconds
-} 
-
-/*scroll & fade effect*/
-
-const items = document.querySelectorAll('.item')
-
-const options = {
-  threshold: 0.5
-}
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('slide-in');
-    }
-  });
-}, options)
-
-items.forEach(item => {
-  observer.observe(item);
+button.on("click", function(){
+  darkMode.toggleClass("dark-mode")
 })
+  
+
+/*general styling*/
+
+  $('.margin').css({
+     'margin-bottom': '45px'
+   });
+
+  $('body').css({
+     'font': 'Garamond, serif',
+     'line-height': '1.8',
+     'color': 'f5f6f7',
+     'padding':'25px',
+     'background-color': 'white',
+     'color': 'dark-grey'
+    }); 
+
+ 
+  $('*').css({
+    'box-sizing': 'border-box'
+    });
+  
+  $('.Myavatar').css({
+      'display': 'flex',
+      'align-items': 'center'
+    });
+
+/*containers & page sections*/  
+
+  $('.bg-1, .bg-4').css({
+     'background-color': 'hsla(0, 100%, 30%, 0.3)', 
+     'color': '111111',
+     'position': 'relative'
+   });
+
+  $('.bg-2').css({
+     'background-color': '#d3d3d3', 
+     'color': '555555'
+   });
+
+  $('.bg-3').css({
+     'background-color': '#fofffo', 
+     'color': '000000'
+   });
+
+  $('.container-fluid').css({
+     'padding-top': '70px', 
+     'padding-bottom': '70px'
+   });
+
+/*all paragraph styling*/
+
+  $('p').css({
+     'font-size': '20px'
+    });
+
+  $('.p-1, .p-2, .p-3').css({
+      'padding': '10px',
+      'font-weight': 'bold'
+    });
+
+  $('.p-1, .p-3').css({
+       'border':'5px #d3d3d3',
+       'border-style':'outset'
+   }); 
+
+  $('.p-4').css({
+      'display': 'flex',
+      'font-weight': 'bold'
+  });
+
+/*Images in section three*/
+
+  $('.img-thumbnail, .img-thumbnail2, .img-thumbnail3').css({
+     'float': 'left'
+   });
+
+  $('.img-thumbnail, .img-thumbnail2').css({
+     'display': 'flex'
+   });
+
+  $('.img-thumbnail2, .img-thumbnail3').css({
+     'padding': '20px'
+   });
+
+  $('.img-thumbnail').css({
+     'transform': 'rotate(-10deg)'
+   });
+
+   $('.img-thumbnail3').css({
+     'transform': 'rotate(5deg)'
+   });
+  
+
